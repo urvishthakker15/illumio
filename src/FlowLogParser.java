@@ -6,8 +6,6 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.FileWriter;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class FlowLogParser {
 
     // Class-level HashMap to store the lookup table (dstport, protocol) -> tag
@@ -22,6 +20,22 @@ public class FlowLogParser {
     // HashMap to count occurrences of each tag
     private Map<String, Integer> tagCounts = new HashMap<>();
 
+
+    public void setProtocolMap(Map<String, String> protocolMap) {
+        this.protocolMap = protocolMap;
+    }
+
+    public void setLookupTable(Map<String, String> lookupTable) {
+        this.lookupTable = lookupTable;
+    }
+
+    public Map<String, String> getProtocolMap() {
+        return protocolMap;
+    }
+
+    public Map<String, String> getLookupTable() {
+        return lookupTable;
+    }
 
     public static void main(String[] args) {
 
